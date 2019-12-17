@@ -16,3 +16,7 @@
 - Edge locations are not jusy READ only, you can write to them too (ie out an object on to them).
 - Objects are cached for the life of the TTL (Time to live)
 - You can clear cached objects, but you will be charged.
+
+3- Ivalidate cache
+
+- cost money
