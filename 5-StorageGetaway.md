@@ -30,4 +30,3 @@
 
 5- Gateway Virtual Tape Library (VTL)
     - Tape Getaway offers a durable, cost-effective solution to archive your data in the AWS Cloud. The VTL interface it provides lets you leverage your existing tape-based backup application infrastructure to store data on virtual tape cartridges that you create on your tape gateway. Each tape gateway is available to your existing client backup applications as iSCSI devices. You add tape catridges as you need to archive your data. Supported by NetBacukp, Backup Exec, Veeam, etc.
-
