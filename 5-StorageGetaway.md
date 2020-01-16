@@ -6,7 +6,7 @@
 
 2- Four types of Storage Gateways
 
-- File Getaway (NFS)
+- File Getaway (NFS & SMB)
 - Volumes Getaway (ISCSI)
     - Stored Volumes
     - Cached Volumes
