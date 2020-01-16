@@ -10,7 +10,7 @@
 - Volumes Getaway (ISCSI)
     - Stored Volumes - Entire Dataset is stored on site and is asynchronously backed up to S3
     - Cached Volumes - Entire Dataset is stored on S3 and the most frequently accessed data is cached on site. 
-- Gateway Virtual Tape Llibrary (VTL)
+- Gateway Virtual Tape Llibrary (VTL) - Used for backups and uses popular backup applications like NetBackup, Backup Exec, Veeam, etc.
 
 3- File Getaway
 
