@@ -4,846 +4,576 @@
           {
              "questions":[
                 {
-                   "question":"You run a meme creation website that stores the original images in S3 and each meme's metadata in DynamoDB. You need to decide upon a low-cost storage option for the memes, themselves. If a meme object is unavailable or lost, a Lambda function will automatically recreate it using the original file from S3 and the metadata from DynamoDB. Which storage solution should you use to store the non-critical, easily reproducible memes in the most cost effective way?",
-                   "explanation":"S3 - OneZone-IA is the recommended storage for when you want cheaper storage for infrequently accessed objects. It has the same durability but less availability.  There can be cost implications if you use it frequently or use it for short lived storage. Glacier is cheaper, but has a long retrieval time. RRS has effectively been deprecated. It still exists but is not a service that AWS want to sell anymore.",
-                   "links":[
-                      "https://aws.amazon.com/s3/faqs/?nc=sn&loc=6",
-                      "https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html"
-                   ],
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
-                   ],
-                   "tags":[
-                      "s3",
-                      "mega-quiz-2"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":null,
-                         "text":"S3"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - IA"
-                      },
-                      {
-                         "correct":true,
-                         "text":"S3 - 1Zone-IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - RRS"
-                      },
-                      {
-                         "correct":null,
-                         "text":"Glacier"
-                      }
-                   ]
-                },
-                {
-                   "question":"What is Amazon Glacier?",
+                   "question":"What is an additional way to secure the AWS accounts of both the root account and new users alike?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
-                         "correct":false,
-                         "text":"A tool that allows to \"freeze\" an EBS volume."
-                      },
-                      {
                          "correct":true,
-                         "text":"An AWS service designed for long term data archival."
+                         "text":"Implement Multi-Factor Authentication for all accounts. "
                       },
                       {
                          "correct":false,
-                         "text":"A highly secure firewall designed to keep everything out."
+                         "text":"Store the access key id and secret access key of all users in a publicly accessible plain text document on S3 of which only you and members of your organization know the address to."
                       },
                       {
                          "correct":false,
-                         "text":"It is a tool used to resurrect deleted EC2 snapshots."
+                         "text":"Configure the AWS Console so that you can only log in to it from a specific IP Address range"
+                      },
+                      {
+                         "correct":false,
+                         "text":"Configure the AWS Console so that you can only log in to it from your internal network IP address range."
                       }
                    ]
                 },
                 {
-                   "question":"You work for a health insurance company that amasses a large number of patients' health records. Each record will be used once when assessing a customer, and will then need to be securely stored for a period of 7 years. In some rare cases, you may need to retrieve this data within 24 hours of a claim being lodged. Given these requirements, which type of AWS storage would deliver the least expensive solution?",
-                   "explanation":"The recovery rate is a key decider.  The record shortage must be; safe, durable, low cost, and the recovery can be slow.  All features of Glacier. ",
-                   "links":[
-                      "https://aws.amazon.com/s3/faqs/?nc=sn&loc=6",
-                      "https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html"
-                   ],
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
-                   ],
-                   "tags":[
-                      "s3"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":null,
-                         "text":"S3"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - OneZone-IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - RRS"
-                      },
-                      {
-                         "correct":true,
-                         "text":"Glacier"
-                      }
-                   ]
-                },
-                {
-                   "question":"Your digital marketing company currently stores their data on premise, but they are considering migrating their data storage to S3. Each bucket will be named after an individual customer, followed by a random series of letters and numbers. Once written to S3, the customer data is rarely changed. However, on occasion, customers may need immediate access to certain files, which are not easily reproducible if lost. Which S3 storage class should you choose to minimise costs and to expedite a quick retrieval of your customers' data?",
-                   "explanation":"the need for immediate access rules out Glacier and OneZone-IA. S3-IA is cheaper than S3 as long as the access is actually infrequent. RRS has effectively been deprecated.",
-                   "links":[
-                      "https://aws.amazon.com/s3/faqs/?nc=sn&loc=6",
-                      "https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html"
-                   ],
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
-                   ],
-                   "tags":[
-                      "s3"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":null,
-                         "text":"S3"
-                      },
-                      {
-                         "correct":true,
-                         "text":"S3 - IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - 1Zone-IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - RRS"
-                      },
-                      {
-                         "correct":null,
-                         "text":"Glacier"
-                      }
-                   ]
-                },
-                {
-                   "question":"The difference between S3 and EBS is that EBS is object based where as S3 is block based.",
+                   "question":"Which of the following is not a component of IAM?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
                          "correct":false,
-                         "text":"true"
+                         "text":"Roles"
+                      },
+                      {
+                         "correct":false,
+                         "text":"Users"
+                      },
+                      {
+                         "correct":false,
+                         "text":"Groups"
                       },
                       {
                          "correct":true,
-                         "text":"false"
+                         "text":"Organizational Units"
                       }
                    ]
                 },
                 {
-                   "question":"What is the availability SLA of S3-OneZone-IA?",
-                   "explanation":"OneZone-IA is only stored in one Zone.  While it has the same Durability, it may be less Available than normal S3 or S3-IA.",
+                   "question":"When you create a new user, that user ________.",
+                   "explanation":"To access the console you use an account and password combination.  To access AWS programmatically you use a Key and Secret Key combination",
                    "links":[
-                      "https://aws.amazon.com/s3/storage-classes/?nc=sn&loc=3"
+                      "https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html"
                    ],
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
                          "correct":null,
-                         "text":"99.90%"
+                         "text":"Will be able to log in to the console anywhere in the world, using their access key ID and secret access key."
                       },
                       {
                          "correct":true,
-                         "text":"99.50%"
+                         "text":"Will be able to interact with AWS using their access key ID and secret access key using the API, CLI, or the AWS SDKs."
                       },
                       {
                          "correct":null,
-                         "text":"99.99%"
+                         "text":"Will only be able to log in to the console in the region in which that user was created."
                       },
                       {
                          "correct":null,
-                         "text":"100%"
+                         "text":"Will be able to log in to the console only after multi-factor authentication is enabled on their account."
                       }
                    ]
                 },
                 {
-                   "question":"You have uploaded a file to S3. Which HTTP code would indicate that the upload was successful?",
+                   "question":"A __________ is a document that provides a formal statement of one or more permissions.",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3"
+                      "iam"
                    ],
                    "tags":[
-                      "s3"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":false,
-                         "text":"HTTP 404"
-                      },
-                      {
-                         "correct":false,
-                         "text":"HTTP 501"
-                      },
-                      {
-                         "correct":true,
-                         "text":"HTTP 200"
-                      },
-                      {
-                         "correct":false,
-                         "text":"HTTP 307"
-                      }
-                   ]
-                },
-                {
-                   "question":"One of your users is trying to upload a 7.5GB file to S3. However, they keep getting the following error message: \"Your proposed upload exceeds the maximum allowed object size.\". What solution to this problem does AWS recommend?",
-                   "explanation":null,
-                   "links":[
-                      "https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html"
-                   ],
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
-                   ],
-                   "tags":[
-                      "s3",
-                      "mega-quiz-2"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
                          "correct":true,
-                         "text":"Design your application to use the Multipart Upload API for all objects."
+                         "text":"Policy"
                       },
                       {
                          "correct":false,
-                         "text":"Design your application to use large object upload API for this object."
+                         "text":"User"
                       },
                       {
                          "correct":false,
-                         "text":"Raise a ticket with AWS to increase your maximum object size."
+                         "text":"Group"
                       },
                       {
                          "correct":false,
-                         "text":"Log in to the S3 console, click on the bucket and then click properties. You can then increase your maximum object size to 1TB."
+                         "text":"Role"
                       }
                    ]
                 },
                 {
-                   "question":"You run a popular photo sharing website that depends on S3 to store content. Paid advertising is your primary source of revenue. However, you have discovered that other websites are linking directly to the images in your buckets, not to the HTML pages that serve the content. This means that people are not seeing the paid advertising, and you are paying AWS unnecessarily to serve content directly from S3. How might you resolve this issue?",
+                   "question":"Which statement best describes IAM?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3",
-                      "mega-quiz-2"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
-                         "correct":false,
-                         "text":"Use CloudFront to serve the static content."
-                      },
-                      {
                          "correct":true,
-                         "text":"Remove the ability for images to be served publicly to the site and then use signed URLs with expiry dates."
+                         "text":"IAM allows you to manage users, groups, roles, and their corresponding level of access to the AWS Platform."
                       },
                       {
                          "correct":false,
-                         "text":"Use security groups to blacklist the IP addresses of the sites that link directly to your S3 bucket."
+                         "text":"IAM allows you to manage users' passwords only. AWS staff must create new users for your organization. This is done by raising a ticket."
                       },
                       {
                          "correct":false,
-                         "text":"Use EBS rather than S3 to store the content."
+                         "text":"IAM allows you to manage permissions for AWS resources only."
+                      },
+                      {
+                         "correct":false,
+                         "text":"IAM stands for Improvised Application Management, and it allows you to deploy and manage applications in the AWS Cloud."
                       }
                    ]
                 },
                 {
-                   "question":"You have been asked by your company to create an S3 bucket with the name \"acloudguru1234\" in the EU West region. What would  the URL for this bucket be?",
+                   "question":"Every user you create in the IAM systems starts with ________.",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
+                      "iam"
                    ],
                    "tags":[
-                      "s3",
-                      "mega-quiz-2"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
+                         "correct":false,
+                         "text":"Full Permissions"
+                      },
+                      {
+                         "correct":false,
+                         "text":"Partial Permissions"
+                      },
+                      {
                          "correct":true,
-                         "text":"https://s3-eu-west-1.amazonaws.com/acloudguru1234"
-                      },
-                      {
-                         "correct":false,
-                         "text":"https://s3-us-east-1.amazonaws.com/acloudguru1234"
-                      },
-                      {
-                         "correct":false,
-                         "text":"https://s3.acloudguru1234.amazonaws.com/eu-west-1"
-                      },
-                      {
-                         "correct":false,
-                         "text":"https://s3-acloudguru1234.amazonaws.com/"
+                         "text":"No Permissions"
                       }
                    ]
                 },
                 {
-                   "question":"Which of the following options allows users to have secure access to private files located in S3?",
-                   "explanation":"There are three options in the question which can be used to secure access to files stored in S3 and therefore can be considered correct.  Signed URLs and Signed Cookies are different ways to ensure that users attempting access to files in an S3 bucket can be authorised.  One method generates URLs and the other generates special cookies but they both require the creation of an application and policy to generate and control these items. An Origin Access Identity on the other hand, is a virtual user identity that is used to give the CloudFront distribution permission to fetch a private object from an S3 bucket.  Public S3 buckets should never be used unless you are using the bucket to host a public website and therefore this is an incorrect option.",
-                   "links":[
-                      "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html",
-                      "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-signed-urls.html",
-                      "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-signed-cookies.html",
-                      "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html"
-                   ],
-                   "originalCategories":null,
-                   "tags":[
-                      "s3"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":true,
-                         "text":"CloudFront Signed Cookies"
-                      },
-                      {
-                         "correct":true,
-                         "text":"CloudFront Signed URLs"
-                      },
-                      {
-                         "correct":null,
-                         "text":"Public S3 buckets"
-                      },
-                      {
-                         "correct":true,
-                         "text":"CloudFront Origin Access Identity"
-                      }
-                   ]
-                },
-                {
-                   "question":"You work for a major news network in Europe. They have just released a new mobile app that allows users to post their photos of newsworthy events in real time. Your organization expects this app to grow very quickly, essentially doubling its user base each month. The app uses S3 to store the images, and you are expecting sudden and sizable increases in traffic to S3 when a major news event takes place (as users will be uploading large amounts of content.) You need to keep your storage costs to a minimum, and it does not matter if some objects are lost. With these factors in mind, which storage media should you use to keep costs as low as possible?",
-                   "explanation":"The key driver here is cost, so an awareness of cost is necessary to answer this.  Full S3 is quite expensive at around $0.023 per GB for the lowest band. S3 standard IA is $0.0125 per GB, S3 One-Zone-IA is $0.01 per GB, and Legacy S3-RRS is around $0.024 per GB for the lowest band. Of the offered solutions  SS3 One-Zone-IA is the cheapest suitable option.  Glacier cannot be considered as it is not intended for direct access, however it comes in at around $0.004 per GB. Of course you spotted that RRS is being deprecated, and there is no such thing as S3 - Provisioned IOPS",
-                   "links":[
-                      "https://aws.amazon.com/s3/pricing/",
-                      "https://aws.amazon.com/s3/reduced-redundancy/"
-                   ],
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "scenario-quiz"
-                   ],
-                   "tags":[
-                      "s3",
-                      "scenario"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":null,
-                         "text":"S3 - Infrequently Accessed Storage"
-                      },
-                      {
-                         "correct":true,
-                         "text":"S3 - One Zone-Infrequent Access"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - Reduced Redundancy Storage (RRS)"
-                      },
-                      {
-                         "correct":null,
-                         "text":"Glacier"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - Provisioned IOPS"
-                      }
-                   ]
-                },
-                {
-                   "question":"How many S3 buckets can I have per account by default?",
+                   "question":"In what language are policy documents written?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
                          "correct":false,
-                         "text":"10"
+                         "text":"Node.js"
                       },
                       {
                          "correct":false,
-                         "text":"20"
+                         "text":"Java"
+                      },
+                      {
+                         "correct":true,
+                         "text":"JSON"
                       },
                       {
                          "correct":false,
-                         "text":"50"
-                      },
-                      {
-                         "correct":true,
-                         "text":"100"
+                         "text":"Python"
                       }
                    ]
                 },
                 {
-                   "question":"You work for manufacturing company who operate a hybrid infrastructure with systems located both in a local Datacentre and in AWS, connected via Direct Connect.  Currently, all on premise servers are backed up to a local NAS, but your CTO wants you decide on the best way to store copies of these backups in AWS.  He has asked you to propose a solution which; maintains maximum durability, on-demand access to the files, but minimizes cost.  Choose the best option from the following which meets the brief.",
-                   "explanation":"S3 OneZone-IA has the same Durability but reduced Availability along with reduced cost. RRS is deprecated and new uses are strongly discouraged by AWS.",
-                   "links":[
-                      "https://aws.amazon.com/s3/storage-classes/",
-                      "https://aws.amazon.com/s3/pricing/"
-                   ],
-                   "originalCategories":[
-                      "s3"
-                   ],
-                   "tags":[
-                      "s3"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":null,
-                         "text":"Copy the files from the NAS to an S3 bucket configured as Standard class."
-                      },
-                      {
-                         "correct":null,
-                         "text":"Copy the files to an EC2 instance with a large EBS volume attached."
-                      },
-                      {
-                         "correct":true,
-                         "text":"Copy the files from the NAS to an S3 bucket with the One Zone-IA class"
-                      },
-                      {
-                         "correct":null,
-                         "text":"Copy the files from the NAS to an S3 bucket with the Reduced Redundancy Storage class."
-                      }
-                   ]
-                },
-                {
-                   "question":"You have been asked to advise on a scaling concern. The client has an elegant solution that works well. As the information base grows they use CloudFormation to spin up another stack made up of an S3 bucket and supporting compute instances. The trigger for creating a new stack is when the PUT rate approaches 100 PUTs per second. The problem is that as the business grows that number of buckets is growing into the hundreds and will soon be in the thousands. You have been asked what can be done to reduce the number of buckets without changing the basic architecture?",
-                   "explanation":"Until 2018 there was a hard limit on S3 puts of 100 PUTs per second.  To achieve this care needed to be taken with the structure of the name Key to ensure parallel processing.  As of July 2018 the limit was raised to 3500 and the need for the Key design was basically eliminated. Disk IOPS is not the issue with the problem. The account limit is not the issue with the problem.",
-                   "links":[
-                      "https://aws.amazon.com/about-aws/whats-new/2018/07/amazon-s3-announces-increased-request-rate-performance/",
-                      "https://docs.aws.amazon.com/AmazonS3/latest/dev/request-rate-perf-considerations.html",
-                      "https://aws.amazon.com/s3/storage-classes/"
-                   ],
-                   "originalCategories":null,
-                   "tags":[
-                      "s3",
-                      "performance"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":null,
-                         "text":"Refine the key hashing to randomize the name Key to achieve the potential of 300 PUTs per second."
-                      },
-                      {
-                         "correct":true,
-                         "text":"Change the trigger level to around 3000 as S3 can now accommodate much higher PUT and GET levels."
-                      },
-                      {
-                         "correct":null,
-                         "text":"Upgrade all buckets to S3 provisioned IOPS to achieve better performance."
-                      },
-                      {
-                         "correct":null,
-                         "text":"Set up multiple accounts so that the per account hard limit on S3 buckets is avoided."
-                      }
-                   ]
-                },
-                {
-                   "question":"You work for a busy digital marketing company who currently store their data on premise. They are looking to migrate to AWS S3 and to store their data in buckets. Each bucket will be named after their individual customers, followed by a random series of letters and numbers. Once written to S3 the data is rarely changed, as it has already been sent to the end customer for them to use as they see fit. However on some occasions, customers may need certain files updated quickly, and this may be for work that has been done months or even years ago. You would need to be able to access this data immediately to make changes in that case, but you must also keep your storage costs extremely low. The data is not easily reproducible if lost. Which S3 storage class should you choose to minimise costs and retrieval times?",
-                   "explanation":"The need to immediate access is an important requirement along with cost.  Glacier has a long recovery time, and 1Zone-IA has a lower Availability level which means that it may not be available when needed.",
-                   "links":[
-                      "https://aws.amazon.com/s3/storage-classes/?nc=sn&loc=3",
-                      "https://aws.amazon.com/blogs/aws/aws-storage-update-new-lower-cost-s3-storage-option-glacier-price-reduction/",
-                      "http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html"
-                   ],
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
-                   ],
-                   "tags":[
-                      "s3",
-                      "mega-quiz-2"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":null,
-                         "text":"S3"
-                      },
-                      {
-                         "correct":true,
-                         "text":"S3 - IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - 1Zone-IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - RRS"
-                      },
-                      {
-                         "correct":null,
-                         "text":"Glacier"
-                      }
-                   ]
-                },
-                {
-                   "question":"You need to use an Object based storage solution to store your critical, non-replaceable data in a cost effective way. This data will be frequently updated and will need some form of version control enabled on it. Which S3 storage solution should you use?",
-                   "explanation":"the key point in the questions is that the data is non-replaceable, and is frequently updated.  The 1st excludes anything the has reduced Durability, the 2nd excluded anything with long recall, reduced availability, or billing based on infrequent access. ",
-                   "links":[
-                      "https://aws.amazon.com/s3/storage-classes/?nc=sn&loc=3",
-                      "https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html"
-                   ],
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
-                   ],
-                   "tags":[
-                      "s3",
-                      "mega-quiz-2"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":true,
-                         "text":"S3"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - OneZone-IA"
-                      },
-                      {
-                         "correct":null,
-                         "text":"S3 - RRS"
-                      },
-                      {
-                         "correct":null,
-                         "text":"Glacier"
-                      }
-                   ]
-                },
-                {
-                   "question":"In S3 the durability of my files is ________.",
+                   "question":"What is the default level of access a newly created IAM User is granted?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
+                      "iam",
+                      "iam-course-quiz"
+                   ],
+                   "tags":[
+                      "iam"
+                   ],
+                   "questionCode":null,
+                   "answers":[
+                      {
+                         "correct":false,
+                         "text":"Read only access to all AWS services."
+                      },
+                      {
+                         "correct":true,
+                         "text":"No access to any AWS services."
+                      },
+                      {
+                         "correct":false,
+                         "text":"Administrator access to all AWS services."
+                      },
+                      {
+                         "correct":false,
+                         "text":"Power user access to all AWS services."
+                      }
+                   ]
+                },
+                {
+                   "question":"Which of the following is not a feature of IAM?",
+                   "explanation":null,
+                   "links":null,
+                   "originalCategories":[
+                      "iam",
+                      "iam-course-quiz"
+                   ],
+                   "tags":[
+                      "iam"
+                   ],
+                   "questionCode":null,
+                   "answers":[
+                      {
+                         "correct":false,
+                         "text":"IAM offers centralized control of your AWS account."
+                      },
+                      {
+                         "correct":false,
+                         "text":"IAM integrates with existing active directory account allowing single sign-on."
+                      },
+                      {
+                         "correct":false,
+                         "text":"IAM offers fine-grained access control to AWS resources."
+                      },
+                      {
+                         "correct":true,
+                         "text":"IAM allows you to setup biometric authentication, so that no passwords are required."
+                      }
+                   ]
+                },
+                {
+                   "question":"You have a client who is considering a move to AWS. In establishing a new account, what is the first thing the company should do?",
+                   "explanation":null,
+                   "links":null,
+                   "originalCategories":[
+                      "iam",
+                      "iam-course-quiz"
+                   ],
+                   "tags":[
+                      "iam"
+                   ],
+                   "questionCode":null,
+                   "answers":[
+                      {
+                         "correct":false,
+                         "text":"Set up an account using Cloud Search."
+                      },
+                      {
+                         "correct":true,
+                         "text":"Set up an account using their company email address."
+                      },
+                      {
+                         "correct":false,
+                         "text":"Set up an account via SQS (Simple Queue Service)."
+                      },
+                      {
+                         "correct":false,
+                         "text":"Set up an account via SNS (Simple Notification Service)"
+                      }
+                   ]
+                },
+                {
+                   "question":"To save administration headaches, Amazon recommends that you leave all security groups in web facing subnets open on port 22 to 0.0.0.0/0 CIDR. That way, you can connect wherever you are in the world.",
+                   "explanation":"Please see the AWS Security white paper for complete details.",
+                   "links":[
+                      "https://aws.amazon.com/whitepapers/"
+                   ],
+                   "originalCategories":[
+                      "iam",
                       "mega-quiz-1"
                    ],
                    "tags":[
-                      "s3",
-                      "mega-quiz-1"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
-                         "correct":false,
-                         "text":"99.99 percent"
+                         "correct":null,
+                         "text":"True"
                       },
                       {
                          "correct":true,
-                         "text":"99.999999999 percent"
-                      },
-                      {
-                         "correct":false,
-                         "text":"99 percent"
-                      },
-                      {
-                         "correct":false,
-                         "text":"100 percent"
+                         "text":"False"
                       }
                    ]
                 },
                 {
-                   "question":"S3 has eventual consistency for which HTTP Methods?",
+                   "question":"A new employee has just started work, and it is your job to give her administrator access to the AWS console. You have given her a user name, an access key ID, a secret access key, and you have generated a password for her. She is now able to log in to the AWS console, but she is unable to interact with any AWS services. What should you do next?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3",
-                      "mega-quiz-2"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":false,
-                         "text":"PUTS of new Objects and DELETES"
-                      },
-                      {
-                         "correct":true,
-                         "text":"overwrite PUTS and DELETES"
-                      },
-                      {
-                         "correct":false,
-                         "text":"PUTS of new objects and UPDATES"
-                      },
-                      {
-                         "correct":false,
-                         "text":"UPDATES and DELETES"
-                      }
-                   ]
-                },
-                {
-                   "question":"What is the availability of objects stored in S3?",
-                   "explanation":null,
-                   "links":null,
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
-                   ],
-                   "tags":[
-                      "s3"
-                   ],
-                   "questionCode":null,
-                   "answers":[
-                      {
-                         "correct":false,
-                         "text":"99%"
-                      },
-                      {
-                         "correct":false,
-                         "text":"99.90%"
-                      },
-                      {
-                         "correct":true,
-                         "text":"99.99%"
-                      },
-                      {
-                         "correct":false,
-                         "text":"100%"
-                      }
-                   ]
-                },
-                {
-                   "question":"S3 has what consistency model for PUTS of new objects",
-                   "explanation":null,
-                   "links":null,
-                   "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
-                      "mega-quiz-2"
-                   ],
-                   "tags":[
-                      "s3",
-                      "mega-quiz-2"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
                          "correct":true,
-                         "text":"Read After Write Consistency"
+                         "text":"Grant her Administrator access by adding her to the Administrators' group."
                       },
                       {
                          "correct":false,
-                         "text":"Write After Read Consistency"
+                         "text":"Require multi-factor authentication for her user account."
                       },
                       {
                          "correct":false,
-                         "text":"Eventual Consistency"
+                         "text":"Ensure she is logging in to the AWS console from your corporate network and not the normal internet."
                       },
                       {
                          "correct":false,
-                         "text":"Usual Consistency"
+                         "text":"Tell her to log out and try logging back in again."
                       }
                    ]
                 },
                 {
-                   "question":"What does S3 stand for?",
+                   "question":"What level of access does the \"root\" account have?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
                          "correct":false,
-                         "text":"Simple SQL Service"
+                         "text":"Read Only Access"
+                      },
+                      {
+                         "correct":false,
+                         "text":"Power User Access"
                       },
                       {
                          "correct":true,
-                         "text":"Simple Storage Service"
+                         "text":"Administrator Access"
                       },
                       {
                          "correct":false,
-                         "text":"Simplified Serial Sequence"
-                      },
-                      {
-                         "correct":false,
-                         "text":"Straight Storage Service"
+                         "text":"No Access"
                       }
                    ]
                 },
                 {
-                   "question":"You are a solutions architect who works with a large digital media company. The company has decided that they want to operate within the Japanese region and they need a bucket called \"testbucket\" set up immediately to test their web application on. You log in to the AWS console and try to create this bucket in the Japanese region however you are told that the bucket name is already taken. What should you do to resolve this?",
+                   "question":"Power User Access allows ________.",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz",
+                      "iam",
+                      "iam-course-quiz"
+                   ],
+                   "tags":[
+                      "iam"
+                   ],
+                   "questionCode":null,
+                   "answers":[
+                      {
+                         "correct":false,
+                         "text":"Full Access to all AWS services and resources."
+                      },
+                      {
+                         "correct":false,
+                         "text":"Read-only access to all AWS services and resources."
+                      },
+                      {
+                         "correct":true,
+                         "text":"Access to all AWS services except the management of groups and users within IAM."
+                      },
+                      {
+                         "correct":false,
+                         "text":"Users to inspect the source code of the AWS platform"
+                      }
+                   ]
+                },
+                {
+                   "question":"Using SAML (Security Assertion Markup Language 2.0), you can give your federated users single sign-on (SSO) access to the AWS Management Console.",
+                   "explanation":null,
+                   "links":null,
+                   "originalCategories":[
+                      "iam",
                       "mega-quiz-2"
                    ],
                    "tags":[
-                      "s3",
+                      "iam",
                       "mega-quiz-2"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
-                         "correct":false,
-                         "text":"Change your region to Korea and then create the bucket \"testbucket\". "
-                      },
-                      {
-                         "correct":false,
-                         "text":"Raise a ticket with AWS and ask them to release the name \"testbucket\" to you."
-                      },
-                      {
                          "correct":true,
-                         "text":"Bucket names are global, not regional. This is a popular bucket name and is already taken. You should choose another bucket name."
+                         "text":"True"
                       },
                       {
                          "correct":false,
-                         "text":"Run a WHO IS request on the bucket name and get the registered owners email address. Contact the owner and ask if you can purchase the rights to the bucket."
+                         "text":"False"
                       }
                    ]
                 },
                 {
-                   "question":"What is the minimum file size that I can store on S3?",
+                   "question":"You are a solutions architect working for a large engineering company who are moving from a legacy infrastructure to AWS. You have configured the company's first AWS account and you have set up IAM. Your company is based in Andorra, but there will be a small subsidiary operating out of South Korea, so that office will need its own AWS environment. Which of the following statements is true?",
                    "explanation":null,
                    "links":null,
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3"
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
-                         "correct":false,
-                         "text":"1KB"
-                      },
-                      {
-                         "correct":false,
-                         "text":"1MB"
+                         "correct":null,
+                         "text":"You will then need to configure Users and Policy Documents for each region respectively."
                       },
                       {
                          "correct":true,
-                         "text":"0 bytes"
+                         "text":"You will need to configure Users and Policy Documents only once, as these are applied globally."
                       },
                       {
-                         "correct":false,
-                         "text":"1 byte"
+                         "correct":null,
+                         "text":"You will need to configure your users regionally, however your policy documents are global."
+                      },
+                      {
+                         "correct":null,
+                         "text":"You will need to configure your policy documents regionally, however your users are global."
                       }
                    ]
                 },
                 {
-                   "question":"What is AWS Storage Gateway?",
-                   "explanation":"At its heart it is a way of using AWS S3 managed storage to supplement on-premise storage. It can also be used within a VPC in a similar way.",
+                   "question":"You are a developer at a fast growing start up. Until now, you have used the root account to log in to the AWS console. However, as you have taken on more staff, you will now need to stop sharing the root account to prevent accidental damage to your AWS infrastructure. What should you do so that everyone can access the AWS resources they need to do their jobs?",
+                   "explanation":"Read the AWS Security Best Practice white paper.  Also note that the IAM account signin URL is different from the Root account signin URL",
                    "links":[
-                      "https://docs.aws.amazon.com/storagegateway/latest/userguide/WhatIsStorageGateway.html",
-                      "https://aws.amazon.com/storagegateway/faqs/"
+                      "https://aws.amazon.com/whitepapers/"
                    ],
                    "originalCategories":[
-                      "s3",
-                      "s3-course-quiz"
+                      "iam",
+                      "iam-course-quiz"
                    ],
                    "tags":[
-                      "s3"
+                      "iam"
+                   ],
+                   "questionCode":null,
+                   "answers":[
+                      {
+                         "correct":null,
+                         "text":"Create an additional AWS root account for each new user."
+                      },
+                      {
+                         "correct":true,
+                         "text":"Create individual user accounts with minimum necessary rights and tell the staff to log in to the console using the credentials provided."
+                      },
+                      {
+                         "correct":true,
+                         "text":"Create a customized sign in link such as \"yourcompany.signin.aws.amazon.com/console\" for your new users to use to sign in with."
+                      },
+                      {
+                         "correct":null,
+                         "text":"Give your users the root account credentials so that they can also sign in."
+                      }
+                   ]
+                },
+                {
+                   "question":"You are a security administrator working for a hotel chain. You have a new member of staff who has started as a systems administrator, and she will need full access to the AWS console. You have created the user account and generated the access key id and the secret access key. You have moved this user into the group where the other administrators are, and you have provided the new user with their secret access key and their access key id. However, when she tries to log in to the AWS console, she cannot. Why might that be?",
+                   "explanation":null,
+                   "links":null,
+                   "originalCategories":[
+                      "iam",
+                      "iam-course-quiz"
+                   ],
+                   "tags":[
+                      "iam"
+                   ],
+                   "questionCode":null,
+                   "answers":[
+                      {
+                         "correct":false,
+                         "text":"You have not applied the \"log in from console\" policy document to the user. You must apply this first so that they can log in."
+                      },
+                      {
+                         "correct":false,
+                         "text":"Your user is trying to log in from the AWS console from outside the corporate network. This is not possible. "
+                      },
+                      {
+                         "correct":false,
+                         "text":"You have not yet activated multi-factor authentication for the user, so by default they will not be able to log in."
+                      },
+                      {
+                         "correct":true,
+                         "text":"You cannot log in to the AWS console using the Access Key ID / Secret Access Key pair. Instead, you must generate a password for the user, and supply the user with this password and your organization's unique AWS console login URL."
+                      }
+                   ]
+                },
+                {
+                   "question":"You have created a new AWS account for your company, and you have also configured multi-factor authentication on the root account. You are about to create your new users. What strategy should you consider in order to ensure that there is good security on this account.",
+                   "explanation":null,
+                   "links":null,
+                   "originalCategories":[
+                      "iam",
+                      "iam-course-quiz"
+                   ],
+                   "tags":[
+                      "iam"
                    ],
                    "questionCode":null,
                    "answers":[
                       {
                          "correct":true,
-                         "text":"It is a virtual appliance that can be used to cache S3 locally at a customer's site."
+                         "text":"Enact a strong password policy: user passwords must be changed every 45 days, with each password containing a combination of capital letters, lower case letters, numbers, and special symbols."
                       },
                       {
-                         "correct":null,
-                         "text":"It allows large scale import/exports in to the AWS cloud without the use of an internet connection."
+                         "correct":false,
+                         "text":"Require users to only be able to log in using biometric authentication."
                       },
                       {
-                         "correct":null,
-                         "text":"It allows a direct MPLS connection in to AWS."
+                         "correct":false,
+                         "text":"Restrict login to the corporate network only. "
                       },
                       {
-                         "correct":null,
-                         "text":"None of the above."
+                         "correct":false,
+                         "text":"Give all users the same password so that if they forget their password they can just ask their co-workers."
                       }
                    ]
                 }
