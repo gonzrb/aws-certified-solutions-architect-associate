@@ -6,11 +6,11 @@
 
 2- Four types of Storage Gateways
 
-- File Getaway (NFS & SMB)
+- File Getaway (NFS & SMB) - For flat files, stored directly on S3.
 - Volumes Getaway (ISCSI)
-    - Stored Volumes
-    - Cached Volumes
-- Tape Gateway (VTL)
+    - Stored Volumes - Entire Dataset is stored on site and is asynchronously backed up to S3
+    - Cached Volumes - Entire Dataset is stored on S3 and the most frequently accessed data is cached on site. 
+- Gateway Virtual Tape Llibrary (VTL)
 
 3- File Getaway
 
