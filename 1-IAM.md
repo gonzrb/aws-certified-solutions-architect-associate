@@ -28,3 +28,10 @@
 - You only get to view these once. If you lose them, you have to regenerate them. So, save them in a secure location.
 - Always setup Multifactor Authentification on your root account.
 - You can create and customise your own password rotation policies.
+
+- Roles
+
+- Roles are more secure than storying your access key and secret access key on individual EC2 instances
+- Roles are easier to manage
+- Roles can be assigned to an EC2 instance after it is created using both the console & command line
+- Roles are universal - you can use them in any region
