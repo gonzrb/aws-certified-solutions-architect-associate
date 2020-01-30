@@ -26,3 +26,18 @@
     - Magnetic (Standard)
         - Lowerst cost per gigabyte of all EBS volume types that is bootable. Magnetic volumes are ideal for workloads where data is accessed infrequently, and applications where the lowest storage cost is important
 
+- EBS vs. Instacne Store
+
+- Instance Store Volumes are sometimes called Ephemeral Storage.
+- Instance store volumes cannot be stopped. If the underlying host fails, you will lose your data.
+- EBS backed instances can be stopped. You will not lose the data on this instance if it is stopped.
+- You can reboot both, you will not lose your data.
+- By default, both ROOT volumes will be deleted on termination. However, with EDS volumes, you can tell AWS to keep the root device volume.
+
+- Encryption
+
+- Create s Snapshot of the unencrypted root device volume
+- Create a copy of the Snapshot and select the encrypt option
+- Create an AMI from the encrypted Snapshot
+- Use that AMI to launch new encrypted instances
+
