@@ -2,7 +2,7 @@
 
 1-What is DNS?
 
-- DNS is ussed to convert human friendly domain names into an Internet Protocol (IP) address. IP addresses are used by computers to identify each other on the network. IP addresses commonly come in 2 different forms, IPv4 and IPv6.
+- DNS is used to convert human friendly domain names into an Internet Protocol (IP) address. IP addresses are used by computers to identify each other on the network. IP addresses commonly come in 2 different forms, IPv4 and IPv6.
 
 - ELBs do not have pre-defined IPv4 addresses: you resolve to them using a DNS name.
 
