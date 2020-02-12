@@ -1,6 +1,4 @@
-
-
-1-What is DNS?
+1- What is DNS?
 
 - DNS is used to convert human friendly domain names into an Internet Protocol (IP) address. IP addresses are used by computers to identify each other on the network. IP addresses commonly come in 2 different forms, IPv4 and IPv6.
 

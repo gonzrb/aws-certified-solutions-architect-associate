@@ -20,7 +20,7 @@
 - All Subnets instance has both a public and private IP address.
 - Each EC2 instance has both a public and private ip address.
 
-5- VPC  PEering
+5- VPC Peering
 
 - Allows you to connect one VPC with another via a direct network route using private IP addresses.
 - Instances behave as if they were on the same private network
