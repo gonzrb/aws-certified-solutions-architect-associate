@@ -34,4 +34,10 @@
     - Security Groups are Stateful, Network Access Control Lists are Stateless.
     - No Transitive peering
 
-6- Custom VPCs and ELBs 
+6- What is a VPC Flow log?
+
+- VPC FLow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data is stored using Amazon ClodWatch Logs. After you have create a flow lof, you can view and retrieve its data in Amazon CloudWatch Logs.
+- They can be created at three levesl
+    - VPC
+    - Subnet
+    - NEtwork Interface Level
