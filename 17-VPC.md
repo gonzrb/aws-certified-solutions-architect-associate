@@ -33,3 +33,5 @@
     - 1 Subnet = 1 Availability Zone.
     - Security Groups are Stateful, Network Access Control Lists are Stateless.
     - No Transitive peering
+
+6- Custom VPCs and ELBs 
