@@ -18,4 +18,4 @@
 
 - Sicky Sessions: enable you users to stick to the same EC2 instace. Can be useful if you are storing information locally to that instance.
 - Cross Zone Load Balancing: Enables yo ut ocross balance across multiple availability zones.
-- P Path Patterns: allow you to direct traffict to different EC2 instances based on the URL contained in the request.
+- Path Patterns: allow you to direct traffict to different EC2 instances based on the URL contained in the request.
