@@ -7,7 +7,7 @@
 	- Network Load Balancer: Best suited for load balancing TCP traffict where extreme performance is required. Operating at the connection level (Layer 4), Network Load Balancer are capable of handling millons of requests per second, while maintaining ultra-low latencies.
 	- Classic Load Balancer: are the legacy Elastic Load Balancers. You can load balance HTTP/HTTPS applications and use Layer 7-specific features, such as X-Fowarded and sticky sessions. You can also use strict Layer 4 load balancing for applications that rely purely on the TPC protocol.
 
-- 504 Error means gateway has tiem out. This means that the application not responding within the idle timeout period.
+- 504 Error means gateway has timed out. This means that the application is not responding within the idle timeout period.
 - Trouble shoot the application. Is the Web Server or Database Server?
 - IF you need IPv4 address of your end user, look for the X-Forwared-For header.
 - Instance monitored by ELB are reported as: InService, or OutofService.
