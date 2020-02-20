@@ -18,5 +18,5 @@
             - 5 transactions per second for reads, up to a maximum total data read rate of 2 MB per second and up to 1000 records per second for writes, up to a maximum total data write rate of 1MB per second (including partition keys).
             - The data capacity of your stream is a function fo the number of shards that you specify for the stream. The total capacity of the stream is the sum of the capacities of its shards.
     - Kinesis Firehose: 
-        - optional storage.
+        - Realtime processing, external storage.
     - Kinesis Analytics: Analizes data inside both.

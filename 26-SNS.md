@@ -9,7 +9,7 @@ One topic can support deliveries to multiple endpoints types - for example, you 
 2- Benefits:
 
 - Instantaneous, push-based delivery (no polling)
-- Simple APIs and easy tintegration with applciations
+- Simple APIs and easy tintegration with applications
 - Flexible message delivery over multiple transport protocols
 - Inexpensive, pay-as-you-go model with no up-front costs
 - Web-based AWS Management Console offers the simplicity of a point-and-click interface

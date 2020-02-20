@@ -7,6 +7,7 @@
     - Standard: Amazon SQS offers standard as the default queue tpye. A standard lets you habve a nearly-unlimited number of transactions per second. Standard queues guarantee that a message is delivered at least once. However, occasionally (because of the highly-ditributed architecture that allows high thourghput), more than one copy of a message might be delivered out of order. Standard queues provide best-effort ordering which ensures that messages are generally delivered in the same as they are sent.
     - FIFO: The FIFO queue complements the standard queue. The most important features of this queue type are FIFO (first-in-first-out) delivery and exactly-once processing: The order in which messages are sent and received is stricly preserved and a message is delivered once and remains available until a consumer processes and deletes it: duplicates are not introduced into the queue. FIFO queues also support mesage groups that allow multiple ordered message groups within a single queue. FIFO queues are limited to 300 transactions per second (TPS), but have all the capabilities of standard queues.
 
+- SQS is a way to de-couple your infrastructure.
 - SQS is pull based, not pushed based.
 - Messages are 250 KB in size.
 - Messages can be kept in thr queue from 1 minute to 14 days; the default retention period is 4 days.
@@ -14,5 +15,3 @@
 - Visibility Time Out maximum is 12 hours.
 - SQS guarantees that your message wil be processed at least once.
 - Amazon SQS long polling is a way to retrieve messages from your Amazon SQS queues. While the regulat short polling returns inmediatelly (even if the message queue being polled is empty), long polling doesn't return a response until a message arrives in the message quee, or the long poll tiems out.
-
-
